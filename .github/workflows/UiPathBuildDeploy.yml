@@ -2,6 +2,7 @@ name: UiPathBuildDeploy
 on:
   pull_request:
     branches: [ main ]
+  workflow_dispatch: 
 jobs:
  remove-old-artifacts:
     runs-on: windows-latest
