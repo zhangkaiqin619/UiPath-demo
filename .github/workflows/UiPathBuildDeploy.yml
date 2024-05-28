@@ -19,5 +19,5 @@ jobs:
           foreach($package in Get-ChildItem -Path ${{ github.workspace }} -Recurse -Filter project.json -File) {
             uipcli package pack "$package" -o "${{ github.workspace }}\output }}" --outputType Tests
             dir "${{ github.workspace }}\output }}"
-            uipcli package deploy "${{ github.workspace }}\output\baidu_Tests.1.0.0.nupkg" "https://cloud.uipath.com/snwxjqygt/DefaultTenant/orchestrator_/" "${{secrets.TEST_TENANT_NAME}}" -A ${{secrets.ACCOUNT_NAME}} -I ${{secrets.OAUTH_CLIENT_ID}} -S "${{secrets.OAUTH_CLIENT_SECRET}}" -o "Shared" --applicationScope "OR.Folders.Read OR.Settings.Read"
+            uipcli package deploy "${{ github.workspace }}\output\baidu_Tests.1.0.0.nupkg" "https://cloud.uipath.com/snwxjqygt/DefaultTenant/orchestrator_/" "DefaultTenant -t btrdyZryXWcJoVfwaFGQhIV3q8XAzqNq4rCs-UeNKlLHZ -a snwxjqygt -o docker_test"
           }
