@@ -1,0 +1,55 @@
+name: UiPathBuildDeploy
+on:
+  pull_request:
+    branches: [ main ]
+jobs:
+ remove-old-artifacts:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+    - name: Remove old artifacts
+      uses: c-hive/gha-remove-artifacts@v1
+      with:
+        age: '1 month'
+ Build:
+    runs-on: windows-latest
+    needs: remove-old-artifacts
+    steps:            
+      # Checkout code from this repo
+      - name: Checkout Code
+        uses: actions/checkout@v2      
+      # Facilitate the UiPath CLI in the github artifacts
+      - name: Get UiPath CLI
+        run: |
+                 New-Item -Path "C:\\" -ItemType "directory" -Name "uipathcli";
+                 Invoke-WebRequest "https://www.myget.org/F/uipath-dev/api/v2/package/UiPath.CLI/1.0.7985.19721" -OutFile "C:\\uipathcli\\cli.zip";
+                 Expand-Archive -LiteralPath "C:\\uipathcli\\cli.Zip" -DestinationPath "C:\\uipathcli";
+      # Use uipcli to package and deploy (for each project.json found)                           
+      - name: Pack and Deploy
+        run: |
+                foreach($package in Get-ChildItem -Path ${{ github.workspace }} -Recurse -Filter project.json -File)
+                       {    
+                          # Get some data from the package.json for package naming
+                          $json = Get-Content "$package" | Out-String | ConvertFrom-Json
+                          $foo = $json.projectVersion
+                          $Name=$json.name
+                          echo "::set-output name=PATH::$package"
+                          echo $foo
+                          $v= [version] "$foo"
+                          $newversion= "{0}.{1}.{2}.{3}" -f $v.Major, $v.Minor, ($v.Build),"${{github.run_number}}"
+                          $VERSION=[string]$newversion
+                          echo $VERSION
+                          echo $Name
+                          echo ${{ github.workspace }}\$Name.$VERSION.nupkg
+                          # Build and Deploy the Package
+                          & "C:\\uipathcli\\lib\\net461\\uipcli.exe" package pack "$package" -o "${{ github.workspace }}" -v $VERSION -l en-US
+                          & "C:\\uipathcli\\lib\\net461\\uipcli.exe" package deploy "${{ github.workspace }}\$($Name).$VERSION.nupkg" "https://cloud.uipath.com" "${{secrets.UAT_TENANT_NAME}}" -A ${{secrets.ACCOUNT_NAME}} -I ${{secrets.OAUTH_CLIENT_ID}} -S "${{secrets.OAUTH_CLIENT_SECRET}}" -o "Shared" --applicationScope "${{secrets.OAUTH_CLIENT_SCOPES}}"
+                       }    
+      # Persist build artifacts
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.0
+        with:	 
+             name: ProjectFiles
+             path: ${{ github.workspace }}/**
+             if-no-files-found: error
+             retention-days: 2
