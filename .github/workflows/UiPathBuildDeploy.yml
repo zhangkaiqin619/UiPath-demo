@@ -17,7 +17,7 @@ jobs:
       - name: Pack UiPath project
         run: |
           foreach($package in Get-ChildItem -Path ${{ github.workspace }} -Recurse -Filter project.json -File) {
-            uipcli package pack "$package" -o "${{ github.workspace }}\output }}" --outputType Tests
-            dir "${{ github.workspace }}\output }}"
-            uipcli package deploy "${{ github.workspace }}\output\baidu_Tests.1.0.0.nupkg" "https://cloud.uipath.com/snwxjqygt/DefaultTenant/orchestrator_/" "DefaultTenant -t btrdyZryXWcJoVfwaFGQhIV3q8XAzqNq4rCs-UeNKlLHZ -a snwxjqygt -o docker_test"
+            uipcli package pack "$package" -o "${{ github.workspace }}\output" --outputType Tests
+            dir "${{ github.workspace }}\output"
+            uipcli package deploy "${{ github.workspace }}\output\baidu_Tests.1.0.0.nupkg" "https://cloud.uipath.com/snwxjqygt/DefaultTenant/orchestrator_/" DefaultTenant -t "btrdyZryXWcJoVfwaFGQhIV3q8XAzqNq4rCs-UeNKlLHZ" -a snwxjqygt -o docker_test
           }
