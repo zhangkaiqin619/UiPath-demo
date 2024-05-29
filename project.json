@@ -1,11 +1,9 @@
 {
   "name": "baidu",
-  "projectId": "0fe47a2d-31ad-4799-8d29-b4e63a59670e",
-  "description": "baidu",
+  "projectId": "3ec6f833-4ee5-4f29-b468-d33b49daf917",
+  "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.23.3-preview]",
-    "UiPath.Mail.Activities": "[1.22.2]",
     "UiPath.System.Activities": "[24.3.1]",
     "UiPath.Testing.Activities": "[24.4.0-preview]",
     "UiPath.UIAutomation.Activities": "[24.4.1-preview]"
@@ -14,7 +12,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.4.0.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.170668390",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -35,7 +33,7 @@
   },
   "designOptions": {
     "projectProfile": "Developement",
-    "outputType": "Process",
+    "outputType": "Tests",
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
@@ -43,18 +41,17 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "9d8b7805-c77d-405f-867a-a5f2866a05f1",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase.xaml"
+      }
+    ],
     "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
-  "entryPoints": [
-    {
-      "filePath": "Main.xaml",
-      "uniqueId": "9cff9f99-b85c-4a13-a7a7-3489ef761684",
-      "input": [],
-      "output": []
-    }
-  ],
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},

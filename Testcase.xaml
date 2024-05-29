@@ -1,0 +1,143 @@
+
+
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="754,996" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="512,931" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 百度一下，你就知道" sap:VirtualizedContainerService.HintSize="450,843" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="fd144158-fe46-4636-aa4f-95ed2cffb789" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,601" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT kw'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,292" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="fd144158-fe46-4636-aa4f-95ed2cffb789" Text="test" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.baidu.com/" DesignTimeRectangle="799, 668, 1100, 88" DesignTimeScaleFactor="2" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='kw' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='kw' tag='INPUT' type='' class='s_ipt' aaname='' /&gt;" Guid="fb0a80cb-15be-4db1-8833-03d4cd55b8f8" InformativeScreenshot="090ebb633998c97574543eb358121485.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='百度一下，你就知道' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '百度一下'" sap:VirtualizedContainerService.HintSize="354,222" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fd144158-fe46-4636-aa4f-95ed2cffb789" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.baidu.com/" CVScreenId="1e907724-d067-4863-81d7-43e35988d105" CvElementArea="1464, 319, 223, 81" CvTextArea="1501, 342, 146, 38" CvTextArgument="EH-" CvType="Button" DesignTimeRectangle="1463, 321, 224, 80" DesignTimeScaleFactor="2" ElementType="Button" FullSelectorArgument="&lt;webctrl id='su' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='su' tag='INPUT' type='submit' class='bg s_btn' aaname='百度一下' check:text='百度一下' /&gt;" Guid="a49ac5eb-4d63-4ba3-b0b8-707531589c0a" InformativeScreenshot="a43450cbdfe395e3acf8d267039ecfc0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='百度一下，你就知道' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-13, -13, 2906, 1730" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="b3dd726b64813e7ec991211a302811f6.jpg" Selector="&lt;html app='chrome.exe' title='百度一下，你就知道' /&gt;" Title="百度一下，你就知道" Url="https://www.baidu.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
